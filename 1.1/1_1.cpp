@@ -12,6 +12,7 @@ using namespace std;
 bool existCharactor(string s)
 {
 	//initate the array with 0 of each cell
+	//the size of the whole ascii is 0-255
 	int exist[256] = {0};
 	int length = s.length();
 	for (int i = 0; i < length; i++)
