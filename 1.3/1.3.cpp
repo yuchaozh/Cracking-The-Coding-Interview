@@ -27,10 +27,8 @@ int main(int argc, char* argv[])
 		{
 			if (input[i] == input[j])
 			{
-				cout<<"i: "<<i<<"  "<<input[i]<<"  j: "<<j<<"  "<<input[j]<<endl;
 				exitSame = true;
 				input.erase(j, 1);
-				cout<<input<<endl;
 				j--;
 			}
 		}
