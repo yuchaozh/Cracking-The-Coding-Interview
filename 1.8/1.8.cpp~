@@ -1,0 +1,28 @@
+/*Question:
+ *Assume you have a method isSubstring which checks if one word
+ *is a substring of another. Given two strings, s1 and s2, write
+ *code to check if s2 is a rotation of s1 using only one call to
+ *isSubstring(i.e.,"waterbottle" is a rotation of "erbottlewat")
+ *
+ *
+ *
+ *Author: Yuchao Zhou
+ */
+#include <algorithm>
+#include <stdlib.h>
+#include <string>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+bool isRotation(string s1, string s2)
+{
+	int len = s1.size();
+	if (len == s2.size() && len > 0)
+	{
+		string s1s1 = s1 + s1;
+		return isSubstring(s1s1, s2);
+	}
+	return false;
+
