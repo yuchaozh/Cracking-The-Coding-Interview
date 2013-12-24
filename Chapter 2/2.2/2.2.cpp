@@ -3,7 +3,9 @@
  *singly linked list.
  *
  *Author: Yuchao Zhou
- *
+ *用string的话可以获得length，然后for循环移到nth to last处。但是调用stl的函数可能会增加O()。
+ *用两个指针，一个在前，一个在后，相隔n - 1。然后一起移动即可。
+ *不用先遍历一遍取得长度在移动。这样复杂度会增加。
  */
  
 #include <string>
