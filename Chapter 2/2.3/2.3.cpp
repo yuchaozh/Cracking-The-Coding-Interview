@@ -6,6 +6,8 @@
  *Result:nothing is returned, but the new linked list like
  *a->b->d->e
  *
+ *在删除指定节点的时候，不一定非要让前面那个节点的next指向删除节点的后一个节点
+ *可以让删除节点的后一个节点复制给删除节点，然后跳过后面节点，指向后面的后面节点
  *Author: Yuchao Zhou
  */
  
