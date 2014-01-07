@@ -12,6 +12,7 @@ using namespace std;
 bool existCharactor(string s)
 {
 	//initate the array with 0 of each cell
+	//但是如果不是0的话就不行了。int exist[256] = {1};其中第一个是1，后面的都是0，要使用memset。
 	//the size of the whole ascii is 0-255
 	int exist[256] = {0};
 	int length = s.length();
