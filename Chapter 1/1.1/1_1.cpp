@@ -12,6 +12,7 @@ using namespace std;
 bool existCharactor(string s)
 {
 	//initate the array with 0 of each cell
+	//这是错误的。int exist[256] = {1};其中第一个是1，后面的都是0
 	//the size of the whole ascii is 0-255
 	int exist[256] = {0};
 	int length = s.length();
