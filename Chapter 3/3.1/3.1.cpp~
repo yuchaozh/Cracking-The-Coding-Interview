@@ -12,7 +12,7 @@
 using namespace std;
 
 int stackSize = 300;
-//initate a int array;
+//initate a int array with parameter;
 int* stack;
 int points[3] = {0, 300, 600};
 

@@ -2,6 +2,9 @@
  *Describe how you could use a single array to implement three
  *stacks
  *
+ *Tricky: divide the array into three equal space and using 
+ *points to record the index
+ *
  *Author: Yuchao Zhou
  */
  
@@ -12,7 +15,7 @@
 using namespace std;
 
 int stackSize = 300;
-//initate a int array;
+//initate a int array with parameter;
 int* stack;
 int points[3] = {0, 300, 600};
 
