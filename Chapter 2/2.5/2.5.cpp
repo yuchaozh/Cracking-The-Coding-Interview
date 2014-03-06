@@ -76,7 +76,8 @@ node* findLoop(node* n)
 	}
 	node* n1 = n;
 	node* n2 = n;
-	while (n2->next != NULL)
+       //while (n2->next != NULL) is wrong when only has two nodes (1, 2)
+        while (n2->next && ne->next->next)
 	{
 		n1 = n1->next;
 		n2 = n2->next->next;
