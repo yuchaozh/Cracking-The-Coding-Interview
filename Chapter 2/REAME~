@@ -1,0 +1,8 @@
+2.1:Write code to remove deplicates from an unsorted linked list. FOLLOW UP How would you solve this problem if a temporary buffer is not allowed?
+
+2.2:Implement an algorithm to find the nth to last element of a singly linked list.
+
+2.3:Implement an algorithm to delete a node in the middle of a single linked list, given only access to that node. EXAMPLE Innput:the node 'c' from the linked list a->b->c->d->e Result:nothing is returned, but the new linked list like a->b->d->e
+
+2.4:Given a circular linked list, implement an algorithm which  returns node at the beginning of the loop. Circular linked list: A (corrupt) linked list in which a node's next pointer points to an earlier node, so as to make a loop in the linked list. EXAMPLE Input:A->B->C->D->E->F->C (the same C as earlier) Output:C
+
