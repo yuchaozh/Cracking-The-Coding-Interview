@@ -67,6 +67,7 @@ node* initiate()
 	return head;
 }
 
+/**
 node* findLoop(node* n)
 {
 	if (n == NULL || n->next == NULL)
@@ -77,7 +78,7 @@ node* findLoop(node* n)
 	node* n1 = n;
 	node* n2 = n;
        //while (n2->next != NULL) is wrong when only has two nodes (1, 2)
-        while (n2->next && ne->next->next)
+        while (n2->next && n2->next->next)
 	{
 		n1 = n1->next;
 		n2 = n2->next->next;
@@ -99,7 +100,50 @@ node* findLoop(node* n)
 	}
 	return n1;
 }		
+**/
+
+class Solution 
+{
+public:
+    ListNode *detectCycle(ListNode *head) 
+    {
+    	bool hasCycle = false;
+		if (head == NULL || head->next == NULL)
+			return NULL;
+		ListNode* n1 = head;
+		ListNode* n2 = head;
+		// while(!n2->next == NULL) is wrong.
+		// only has two nodes 1, 2
+		while(n2->next && n2->next->next)
+		{
+			n1 = n1->next;
+			n2 = n2->next->next;
+			if (n1 == n2)
+			{
+				hasCycle = true;
+				break;
+			}
+		}
 		
+		// judge has cycle or not
+		if (hasCycle == true)
+		{
+			// let n1 point to the start point, and let n1 and n2 move forward,
+			// the meet point is the start of the loop
+			n1 = head;
+			while (n1 != n2)
+			{
+				n1 = n1->next;
+				n2 = n2->next;
+			}
+			return n1;
+		}
+		else
+			return NULL;
+    }
+};
+
+
 int main()
 {
 	node* head = initiate();
